@@ -405,7 +405,7 @@ def gswcwv(request):
 #     return render(request, 'events/getting-started-with-backend-development-confirmation.html')
 
 def aawibd(request):
-    return render(request, 'events/getting-started-with-backend-development.html')
+    return render(request, 'events/an-advanced-workshop-in-backend-development.html')
 
 
 def aawibdconfirmation(request):
