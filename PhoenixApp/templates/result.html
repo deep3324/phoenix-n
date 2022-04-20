@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+
+<link href="{% static '/css/style-event.css' %}" rel="stylesheet">
+<link href="{% static '/css/style-avenir.css' %}" rel="stylesheet">
+<link href="{% static '/css/style.css' %}" rel="stylesheet">
+<link href="{% static '/css/style-clubs.css' %}" rel="stylesheet">
+<title>RESULTS | PHOENIX</title>
+<style>
+  .col-md-3 {
+    display: inline-table;
+    flex-direction: column;
+  }
+
+  .col-md-3 img {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+  }
+</style>
+{% endblock head %}
+
+{% block content %}
+<!-- ======= Intro Section ======= -->
+<section id="intro" class="clearfix">
+  <div class="container" data-aos="fade-up">
+    <div class="heading"><span>RESULTS</span></div>
+  </div>
+</section><!-- End Intro Section -->
+
+<!-- ======= Testimonials Section ======= -->
+<section id="testimonials" class="section-bg">
+  <div class="container-fluid" data-aso="zoom-in">
+    <!--Slideshow starts here -->
+    <div class="row my-3 d-flex justify-content-around">
+      <div id="" class="col slide my-3">
+        <div class="container no-padding">
+          <div class="carousel-item active">
+            {% for i in results %}
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card align-items-center" style="width: 18rem;">
+                <img src="/media/{{i.image}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h3>{{i.studentname}}</h3>
+                  <h4><strong>RANK- {{i.position}} </strong></h4>
+                  <p>
+                    <strong> Year: {{i.year}}</strong>
+                    <br>
+                    <strong> Department: {{i.department}}</strong>
+                    <br>
+                    <strong> College: {{i.college}} </strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+            {% if forloop.counter|divisibleby:6 and forloop.counter > 0 and not forloop.last %}
+          </div>
+          <div class="carousel-item"></div>
+            {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><!-- End Testimonials Section -->
+{% endblock content %}
+{% block files %}
+<!-- Template Main JS File -->
+
+<script src="{% static '/js/main.js' %}"></script>
+<!-- <script>
+  $(document).ready(function () {
+    $("#testimonial-slider").owlCarousel({
+      items: 3,
+      itemsDesktop: [1000, 3],
+      itemsDesktopSmall: [979, 2],
+      itemsTablet: [768, 2],
+      itemsMobile: [650, 1],
+      pagination: true,
+      autoPlay: true
+    });
+  });
+</script> -->
+{% endblock files %}

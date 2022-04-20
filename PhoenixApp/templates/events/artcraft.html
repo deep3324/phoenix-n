@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link href="{% static '/css/style-membership.css' %}" rel="stylesheet">
+<title>Creativarty | PHOENIX</title>
+{% endblock head %}
+{% block content %}
+
+<body class="container-fluid px-0">
+    <section id="intro" class="clearfix text-center">
+        <div class="container" data-aos="fade-up">
+            <div class="blog-info" data-aos="zoom-in" data-aos-delay="100">
+                <img class="mb-4" src="{% static '/images/phoenix_white.png' %}" alt="" width="130px">
+                <h2 style="color: #FFF; font-size: 40px; font-weight: 800;">Creativarty</h2>
+            </div>
+        </div>
+    </section>
+    <div class="container membership-box">
+        <form method="POST" action="creativarty/confirmation/" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input name="name" type="text" class="form-control" id="name" placeholder="Enter Your Name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input name="email" type="email" class="form-control" id="email" placeholder="Enter Your Email">
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact Number</label>
+                <input name="contact" type="tel" class="form-control" id="contact" placeholder="Enter Your Contact Number">
+            </div>
+            <div class="form-group">
+                <label for="college">College</label>
+                <input name="college" type="text" class="form-control" id="college" placeholder="Enter College Name">
+            </div>
+            <div class="form-group">
+                <label for="department">Department</label>
+                <input name="department" type="text" class="form-control" id="department" placeholder="Enter your Department">
+            </div>
+            <div class="form-group">
+                <label for="year">Year (1st / 2nd / 3rd)</label>
+                <input name="year" type="text" class="form-control" id="year" placeholder="Enter your Year">
+            </div>
+            <div class="form-group">
+                <label for="image">Upload Your Art</label>
+                <input name="image" type="file" class="form-control" id="image" placeholder="Choose" style="border: none;">
+                <small>JPG files only ( Minimum size : 1MB  Maximum size : 10MB )</small>
+            </div>
+            <div class="form-group">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+    <div class="container rules" style="margin-top: 20px">
+        <h4><strong> Topic:</strong> Social Awareness ( any kind of social awareness )</h4>
+    </div>
+    <div class="container rules" style="margin-top: 20px">
+        <h4><strong> Rule & Regulations:</strong></h4>
+        <ul>
+            <li>Only hand drawn pictures will be accepted ( no limitation for colours/pen-pencil sketches / drawing tools)</li>
+            <li>JPG files only ( Minimum size : 1MB  Maximum size : 10MB )</li>
+            <li>Do not send images of your artwork, which are framed or contain watermarks.</li>
+            <li>The artwork submitted to our competitions will be judged based on the following elements of artistic expression:</li>
+            <ol>
+                <li>Interpretation and the clarity of the theme to the viewer.</li>
+                <li>Creativity and originality of the depicted theme.</li>
+                <li>Quality of artistic composition and overall design based on the theme.</li>
+                <li>Overall impression of the art. What is the effect of the artwork in general and as a whole? Overall, does the artwork stand on its own as a complete and outstanding work of art?</li>
+            </ol>
+        </ul>
+    </div>
+</body>
+{% endblock content %}
+
+{% block files %}
+<!-- Template Main JS File -->
+<script src="{% static '/js/main.js' %}"></script>
+
+{% endblock files %}

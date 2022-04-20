@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+
+<link href="{% static '/css/style-event.css' %}" rel="stylesheet">
+<title>GALLERY | PHOENIX</title>
+{% endblock head %}
+
+
+{% block content %}
+<!-- ======= Intro Section ======= -->
+<section id="intro" class="clearfix">
+  <div class="container " data-aos="fade-up">
+    <div class="intro-info" data-aos="zoom-in" data-aos-delay="100">
+      <h2 class="text-center"><br><span>Image</span> Gallery</h2>
+    </div>
+  </div>
+</section><!-- End Intro Section -->
+
+<main id="main">
+
+  <!-- ======= Portfolio Section ======= -->
+  <section id="portfolio" class="clearfix">
+    <div class="container" data-aos="fade-up">
+      <header class="section-header">
+        <h3 class="section-title">Image Gallery</h3>
+      </header>
+      
+      <div class="row" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-12">
+          <ul id="portfolio-flters">
+            <li data-filter="*" class="filter-active">All</li>
+            {% for i in contents|slice:"0:3"%}
+            <li data-filter=".{{ i.Event_id }}">{{ i.Event_name }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      <div class="row portfolio-container d-flex" data-aos="fade-up" data-aos-delay="200">
+        {% for i in contents|slice:"0:"%}
+        <div class="col-lg-4 col-md-6  portfolio-item {{ i.Event_id }}">
+          <div class="portfolio-wrap">
+            <img src="/media/{{i.image}}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4><a>{{ i.Event_name }}</a></h4>
+              <div>
+                <a href="/media/{{i.image}}" data-gall="portfolioGallery" title="{{ i.Event_name }}"
+                  class="venobox link-preview"><i class="ion ion-eye"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      
+    </div>
+  </section><!-- End Portfolio Section -->
+
+</main><!-- End #main -->
+{% endblock content %}
+
+{% block files %}
+<!-- Template Main JS File -->
+<script src="{% static '/js/main.js' %}"></script>
+{% endblock files %}

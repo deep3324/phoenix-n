@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link href="{% static '/css/style-membership.css' %}" rel="stylesheet">
+<title>MEMBERSHIP | PHOENIX</title>
+{% endblock head %}
+
+
+{% block content %}
+
+<body class="container-fluid px-0">
+    <section id="intro" class="clearfix text-center">
+        <div class="container" data-aos="fade-up">
+            <div class="blog-info" data-aos="zoom-in" data-aos-delay="100">
+                <img class="mb-4" src="{% static '/images/phoenix_white.png' %}" alt="" width="130px">
+                <h2 style="color: #FFF; font-size: 40px; font-weight: 500;">One-time Membership</h2>
+            </div>
+        </div>
+    </section>
+    <div class="container membership-box">
+        <form method="POST" action="/membership" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input name="name" type="text" class="form-control" id="name" placeholder="Enter Your Name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input name="email" type="email" class="form-control" id="email" placeholder="Enter Your Email">
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact Number</label>
+                <input name="contact" type="tel" class="form-control" id="contact" maxlength="10" minlength="10" placeholder="Enter Your Contact Number">
+            </div>
+            <div class="form-group">
+                <label for="session">Session</label>
+                <input name="session" type="text" class="form-control" id="session" placeholder="Such as 2018-22 or 2019-2023 or 2020-2024 or 2021-2025">
+            </div>
+            <div class="form-group">
+                <label for="department">Department</label>
+                <input name="department" type="text" class="form-control" id="department" placeholder="Enter your Department">
+            </div>
+            <div class="form-group">
+                <label for="images">Images</label>
+                <input name="images" type="file" class="form-control" accept=".jpg, .jpeg, .png" id="images" placeholder="Upload Your Image">
+                <small>Image size shoule be less than 1 MB</small>
+            </div>
+            <div class="form-group">
+                <label for="transaction_receipt">Payment Slip</label>
+                <input name="transaction_receipt" type="file" class="form-control" accept=".jpg, .jpeg, .png" id="transaction_receipt" placeholder="Upload Your Payment Slip">
+                <small>Image size shoule be less than 1 MB</small>
+            </div>
+            <div class="form-group">
+                <label for="transaction_id">Transaction ID</label>
+                <input name="transaction_id" type="text" class="form-control" id="transaction_id" placeholder="Enter your Transaction ID">
+            </div>
+            <div class="form-group">
+                <small>Cost for Membership is Rs. 200/- (One-time No-Renewal)</small>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+{% endblock content %}
+
+{% block files %}
+<!-- Template Main JS File -->
+<script src="{% static '/js/main.js' %}"></script>
+
+{% endblock files %}

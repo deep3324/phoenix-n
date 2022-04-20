@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link href="{% static '/css/style-clubs.css' %}" rel="stylesheet">
+<title>ELOQUENSE | PHOENIX</title>
+{% endblock head %}
+{% block back %}
+<a href="/clubs" class="back"> <i class="fa fa-arrow-left"></i>Back</a>
+{% endblock back %}
+{% block content %}
+<!-- ======= Intro Section ======= -->
+<section id="intro" class="clearfix">
+    <div class="container" data-aos="fade-up">
+        <div class="club-info" data-aos="zoom-in" data-aos-delay="100">
+            <h2>E L O Q U E N C E</h2>
+            <br>
+            <p>Speak Your Heart Out</p>
+            <div>
+                {% comment %} <a href="#" class="btn-get-started scrollto">Join us</a> {% endcomment %}
+            </div>
+        </div>
+        <div class="club-img" data-aos="zoom-out" data-aos-delay="200">
+            <img style="height: 90%;width: 90%;padding-left: 10%;" src="{% static '/img/eloq-9-removebg-preview.png' %}" alt=""
+                class="img-fluid">
+        </div>
+    </div>
+</section><!-- End Intro Section -->
+
+<!-- ======= About Section ======= -->
+<section id="about">
+    <div class="container" data-aos="fade-up">
+        <header class="section-header">
+            <h3>Eloquense</h3>
+        </header>
+        <div class="row about-container">
+
+            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-right">
+                <h5>“To talk well and eloquently is a very great art,<br>but that an equally great one is to
+                    know the right moment to stop.”</h5>
+                <p>― Mozart Wolfgang Amadeus / Traeg
+                </p>
+                No matter what your technical skills are, to make a mark upon someone you need to be able to
+                express yourself in the best manner possible. The literacy club of phoenix , ELOQUENSE deals
+                with the development of your inter-personal skills. Through events like open-mic and debate
+                competition , students are given a platform to express their views and are given a chance to
+                inculcate the much needed values of confidence in themselves.
+            </div>
+
+            <div class="col-lg-6 background order-lg-2" data-aos="zoom-in">
+                <img style="height: 85%;width: 90%;" src="{% static '/img/eloq-6.jpg' %}" class="img-fluid" alt="">
+            </div>
+        </div>
+        <br>
+        <div class="row about-extra">
+            <div class="col-lg-6" data-aos="fade-right">
+                <img style="height: 85%;width: 90%;" src="{% static '/img/eloq-5.jpg' %}" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 pt-5 pt-lg-0" data-aos="fade-left">
+                <p></p>
+                <p></p>
+                <p></p>
+                <br>
+                <p>The students get a platform to explore their public speaking qualities and communication
+                    skills through various competition.</p>
+                <p>
+                    They also get to perform in front of esteemed guests who attend these events as an audience.
+                </p>
+            </div>
+        </div>
+        <div class="row about-extra">
+            <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
+                <img style="height: 80%;width: 90%;" src="{% static '/img/eloq-10.jpg' %}" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-right">
+                <p>
+                </p>
+                <p>
+                </p>
+                <br><br>
+                <p>
+                    The Club usually indulges in annual open mics , other than that events like kurukshetra- an
+                    intercollege debate competition and intra college debates competition are also common. Along
+                    with this several story and article writing competitions are common in the club.
+                </p>
+            </div>
+        </div>
+    </div>
+</section><!-- End About Section -->
+{% endblock content %}
+
+{% block files %}
+<!-- Template Main JS File -->
+<script src="{% static '/js/main.js' %}"></script>
+{% endblock files %}

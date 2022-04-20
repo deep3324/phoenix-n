@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link href="{% static '/css/style-clubs.css' %}" rel="stylesheet">
+<title>NIRMAAN | PHOENIX</title>
+{% endblock head %}
+{% block back %}
+<a href="/clubs" class="back"> <i class="fa fa-arrow-left"></i>Back</a>
+{% endblock back %}
+{% block content %}
+<!-- ======= Intro Section ======= -->
+<section id="intro" class="clearfix">
+  <div class="container" data-aos="fade-up">
+    <div class="club-info" data-aos="zoom-in" data-aos-delay="100">
+      <h2>N I R M A A N</h2>
+      <br>
+      <p>Progress And Development</p>
+      <div>
+        {% comment %} <a href="#" class="btn-get-started scrollto">Join us</a> {% endcomment %}
+      </div>
+    </div>
+    <div class="club-img" data-aos="zoom-out" data-aos-delay="200">
+      <img style="height: 100%;width: 100%;padding-left: 25%;" src="{% static '/img/civill.png' %}" alt="" class="img-fluid">
+    </div>
+  </div>
+</section><!-- End Intro Section -->
+<!-- ======= About Section ======= -->
+<section id="about">
+  <div class="container" data-aos="fade-up">
+    <header class="section-header">
+      <h3>Nirmaan</h3>
+    </header>
+    <div class="row about-container">
+      <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-right">
+        <h5> “There can be little doubt that in many ways the story of bridge building is the story of civilisation.
+          By it we can readily measure an important part of a people's progress.”
+          - Franklin D. Roosevelt</h5>
+        A club solely for the students of civil and mechanical department. As the name suggests the events of the
+        club are solely related from building ice-cream bridges to entire city plans .
+      </div>
+      <div class="col-lg-6 background order-lg-2" data-aos="zoom-in">
+        <img style="width: 90%;height: 90%;" src="{% static '/img/nir-1.jpg' %}" class="img-fluid" alt="">
+      </div>
+    </div>
+    <div class="row about-extra">
+      <div class="col-lg-6" data-aos="fade-right">
+        <img style="width: 90%;height: 90%;" src="{% static '/img/nir-2.jpg' %}" class="img-fluid" alt="">
+      </div>
+      <div class="col-lg-6 pt-5 pt-lg-0" data-aos="fade-left">
+        <h4></h4>
+        <p>
+        </p>
+        <br><br><br><br><br>
+        <p>Regular forums on autocad, to help students with their curriculam as well.</p>
+      </div>
+    </div>
+    <div class="row about-extra">
+      <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
+        <img style="width: 90%;height: 90%;" src="{% static '/img/nir-5.jpg' %}" class="img-fluid" alt="">
+      </div>
+      <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-right">
+        <p>
+        </p>
+        <p>
+        </p>
+        <br><br><br><br>
+        <p>
+          Events like serve-o-lare , city planning and bridge mania are the most common events that take place
+          commonly under this club.
+        </p>
+      </div>
+    </div>
+  </div>
+</section><!-- End About Section -->
+{% endblock content %}
+
+{% block files %}
+<!-- Template Main JS File -->
+<script src="{% static '/js/main.js' %}"></script>
+{% endblock files %}

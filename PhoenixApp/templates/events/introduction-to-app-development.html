@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<meta name="description"
+    content="Nowadays, the app plays an important role in the field of technology, with the aim to bring the world, one step closer to us, every day. And with the advent of apps, app development has gathered interest in the market. Some of you are interested in app development, make interesting apps, and want to start your journey as an app developer. Thus, to help you figure out your journey in the field of app development, Phoenix is bringing together a session on Introduction to App Development. Here we will discuss app development using Java, its importance, how to learn and implement it. So if you're someone who's still trying to acquire knowledge on this topic, this session is for you.">
+<link href="{% static '/css/style-membership.css' %}" rel="stylesheet">
+<title>Introduction to App Development | PHOENIX</title>
+{% endblock head %}
+
+{% block content %}
+
+<body class="container-fluid px-0">
+    <section id="intro" class="clearfix text-center">
+        <div class="container" data-aos="fade-up">
+            <div class="blog-info" data-aos="zoom-in" data-aos-delay="100">
+                <img class="mb-4" src="{% static '/images/phoenix_white.png' %}" alt="" width="130px">
+                <h2 style="color: #FFF; font-size: 40px; font-weight: 800;">Introduction to App Development</h2>
+            </div>
+        </div>
+    </section>
+    <div class="container rules" style="margin-top: 20px">
+        <h4><strong> Topic:</strong> Introduction to App Development</h4>
+    </div>
+    <div class="container rules" style="margin-top: 20px">
+        <h5>Nowadays, the app plays an important role in the field of technology, with the aim to bring the world, one step closer to us, every day. And with the advent of apps, app development has gathered interest in the market. Some of you are interested in app development, make interesting apps, and want to start your journey as an app developer. Thus, to help you figure out your journey in the field of app development, Phoenix is bringing together a session on <strong>Introduction to App Development</strong>. Here we will discuss app development using Java, its importance, how to learn and implement it. So if you're someone who's still trying to acquire knowledge on this topic, this session is for you.<br>  
+        </h5>
+        <h4><strong>Don't forget to get tuned on</strong></h4>
+        <h4><strong> Date: </strong> 19th December 2021 (Sunday) <strong>to</strong> 23rd December 2021 (Thursday)</h4>
+        <h4><strong> Time:</strong> 08:00 PM</h4>
+    </div>
+    <div class="container membership-box">
+        <form method="POST" action="introduction-to-app-development/confirmation/" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input name="name" type="text" class="form-control" id="name" placeholder="Enter Your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input name="email" type="email" class="form-control" id="email" placeholder="Enter Your College Email" required>
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact Number</label>
+                <input name="contact" type="tel" minlength="10" maxlength="10" class="form-control" id="contact"
+                    placeholder="Enter Your Contact Number" required>
+            </div>
+            <div class="form-group">
+                <label for="department">Department</label>
+                <input name="department" type="text" class="form-control" id="department"
+                    placeholder="Enter your Department" required>
+            </div>
+            <div class="form-group">
+                <label for="session">session</label>
+                <input name="session" type="text" class="form-control" id="session"
+                    placeholder="2018-22, 2019-23, 2020-24, 2021-25" required>
+            </div>
+            <div class="form-group">
+                <label for="college">College Name</label>
+                <input name="college" type="text" class="form-control" id="college"
+                    placeholder="Enter your College Name" value="NSEC">
+            </div>
+            <div class="form-group">
+                <label for="college">Do you have any prior knowledge of App Development?</label>
+                <select class="form-select form-control" aria-label="Do you have any prior knowledge of App Development?" name="prior">
+                    <option value="No prior knowledge" selected>No prior knowledge</option>
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                  </select>
+            </div>
+            <div class="form-group">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+{% endblock content %}
+
+{% block files %}
+<!-- Template Main JS File -->
+<script src="{% static '/js/main.js' %}"></script>
+
+{% endblock files %}

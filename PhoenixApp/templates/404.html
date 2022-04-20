@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+
+<link href="{% static '/css/style-event.css' %}" rel="stylesheet">
+<link href="{% static '/css/style-avenir.css' %}" rel="stylesheet">
+<link href="{% static '/css/style.css' %}" rel="stylesheet">
+<link href="{% static '/css/style-clubs.css' %}" rel="stylesheet">
+<title>404 | PHOENIX</title>
+<style>
+  .col-md-3 {
+    display: inline-table;
+    flex-direction: column;
+  }
+
+  .col-md-3 img {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+  }
+</style>
+{% endblock head %}
+
+{% block content %}
+<!-- ======= Intro Section ======= -->
+<section id="intro" class="clearfix">
+  <div class="container" data-aos="fade-up">
+    <div class="heading"><h1>404 | PAGE NOT FOUND</h1></div>
+  </div>
+</section><!-- End Intro Section -->
+
+<!-- ======= Testimonials Section ======= -->
+<section id="testimonials" class="section-bg">
+  <div class="container-fluid" data-aso="zoom-in">
+    <div class="container" style="max-width: 60%;">
+      <div class="my-2 text-center">
+        <h1 style="font-size: 50px; font-family: Gilroy_Bold">404</h1>
+        <h3 style="color: black; font-family: Gilroy_Bold">Page not found</h3>
+        <h5>the page you are looking for is not found.</h5>
+        <p style="color: black">
+          <a href="/"> Click here</a> to go to the homepage
+        </p>
+      </div>
+    </div>
+  </div>
+</section><!-- End Testimonials Section -->
+{% endblock content %}
+{% block files %}
+<!-- Template Main JS File -->
+
+<script src="{% static '/js/main.js' %}"></script>
+<!-- <script>
+  $(document).ready(function () {
+    $("#testimonial-slider").owlCarousel({
+      items: 3,
+      itemsDesktop: [1000, 3],
+      itemsDesktopSmall: [979, 2],
+      itemsTablet: [768, 2],
+      itemsMobile: [650, 1],
+      pagination: true,
+      autoPlay: true
+    });
+  });
+</script> -->
+{% endblock files %}

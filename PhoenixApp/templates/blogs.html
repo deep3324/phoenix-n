@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+
+<link href="{% static '/css/style-blog.css' %}" rel="stylesheet">
+<title>BLOGS | PHOENIX</title>
+<style>
+  .modal-backdrop {
+    top: 0;
+    left: 0;
+    width: 0vw;
+    height: 0vh;
+  }
+
+  #contentsmodal {
+    height: 80vh;
+    overflow: scroll;
+  }
+
+  .btn-blog:hover {
+    background-color: transparent;
+    border: 2px solid #243665;
+  }
+</style>
+{% endblock head %}
+
+
+{% block content %}
+
+<!-- ======= Intro Section ======= -->
+<section id="intro" class="clearfix">
+  <div class="container" data-aos="fade-up">
+    <div class="blog-info" data-aos="zoom-in" data-aos-delay="100">
+      <h2>The E-wall</h2>
+    </div>
+  </div>
+</section><!-- End Intro Section -->
+
+<!-- ======= Blog Section ======= -->
+<section class="mainblog" data-aos="fade-up">
+  <div class="container">
+    <div class="grid">
+    {% for i in blog|slice:"0:3"%}
+      <div class="image" style="background-image: url('/media/{{i.image}}');">
+        <div class="text">
+          <div class="title">
+            <a href="/blogs/{{i.id}}">
+              <h5>{{i.BlogTitle}}</h5>
+            </a>
+          </div>
+          <div class="name">
+            by {{i.Studentname}} || {{i.Date}}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- End Blog Section -->
+<!--Blog-body-->
+<section class="blog-body my-5" data-aos="fade-up">
+  <div class="container blogbody-grid my-5">
+    <div class="body-section">
+      {% for i in blog|slice:"0:"%}
+      <div class="blog">
+        <div class="images">
+          <img src="/media/{{i.image}}" alt="">
+        </div>
+        <div class="text">
+          <div class="title">
+            <h3>{{i.BlogTitle}}</h3>
+          </div>
+          <div class="name">
+            <h5>{{i.Studentname}} | {{i.Date}}</h5>
+          </div>
+          <div class="inner-text">
+            <p>{{i.Content|safe| slice:"0:115"}} ...</p>
+          </div>
+          <a href="/blogs/{{i.id}}"  id="vq{{i.id}}">
+            Read More
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="sub-section">
+      <div class="write-with-us">
+        <div class="write-box">
+          <h2>
+            WRITE WITH US
+          </h2>
+          <p>
+            Hi There, Are you looking for a place to publish your content? Do u want to see your article posted on the official website of Phoenix?
+            Then here is your chance, Write to us or directly mail u with an article of your choice. Come up with Your article and get your write-up posted here. Hurry!!
+          </p>
+          <button class="btn-blog">
+            <a href="mailto:info@phoenixnsec.in">Mail Us</a>
+          </button>
+          <button class="btn-blog">
+            <a href="/contact">Contact Us</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--End Blog-body-->
+
+{% endblock content %}
+
+{% block files %}
+<!-- Template Main JS File -->
+<script src="{% static '/js/main.js' %}"></script>
+
+<script>
+  $('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').trigger('focus')
+  });
+</script>
+
+{% endblock files %}

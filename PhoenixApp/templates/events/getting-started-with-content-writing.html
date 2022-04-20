@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<meta name="description"
+    content="Content writing is a continuous process of learning, carefully gathering, sifting, organizing, and assessing, all while trying to craft something that makes sense for a user. Some of you are interested in blog writing or want to start your journey as a content writer but still have doubts about what is content writing, why it's useful, how to learn, are the free resources good enough or should we purchase paid resources? To answer all such questions and to help you figure out how to start your journey in content writing, Cybernix is bringing together a session on Getting Started with Technical Content Writing. Here we will discuss what is content writing, its importance, how to learn, and how to implement it. All the Speakers will share with you their journey and experience and also will provide you with a suitable roadmap. So if you're someone who's still trying to acquire a knowledge on this topic, this session is for you.">
+<link href="{% static '/css/style-membership.css' %}" rel="stylesheet">
+<title>Getting Started with Technical Content Writing | PHOENIX</title>
+{% endblock head %}
+
+{% block content %}
+
+<body class="container-fluid px-0">
+    <section id="intro" class="clearfix text-center">
+        <div class="container" data-aos="fade-up">
+            <div class="blog-info" data-aos="zoom-in" data-aos-delay="100">
+                <img class="mb-4" src="{% static '/images/phoenix_white.png' %}" alt="" width="130px">
+                <h2 style="color: #FFF; font-size: 40px; font-weight: 800;">Getting Started with Technical Content Writing</h2>
+            </div>
+        </div>
+    </section>
+    <div class="container rules" style="margin-top: 20px">
+        <h4><strong> Topic:</strong> Getting Started with Technical Content Writing</h4>
+    </div>
+    <div class="container rules" style="margin-top: 20px">
+        <h5>Content writing is a continuous process of learning, carefully gathering, sifting, organizing, and assessing, all while trying to craft something that makes sense for a user. Some of you are interested in blog writing or want to start your journey as a content writer but still have doubts about what is content writing, why it's useful, how to learn, are the free resources good enough or should we purchase paid resources? To answer all such questions and to help you figure out how to start your journey in content writing, Cybernix is bringing together a session on <strong>Getting Started with Technical Content Writing</strong>. Here we will discuss what is content writing, its importance, how to learn, and how to implement it. All the Speakers will share with you their journey and experience and also will provide you with a suitable roadmap. So if you're someone who's still trying to acquire a knowledge on this topic, this session is for you.<br>  
+        </h5>
+        <h4><strong>Don't forget to get tuned on</strong></h4>
+        <h4><strong> Date: </strong> 14th December 2021 (Tuesday)</h4>
+        <h4><strong> Time:</strong> 08:00 PM</h4>
+        <!-- <h4><strong> No. of Question:</strong> 20</h4>
+        <h4><strong> Time Allowance:</strong> 30 Minutes</h4> -->
+        <!-- <h4><strong> First Session :</strong> <a target="_blank" style="color: red;" href="https://www.youtube.com/watch?v=gM7tUS9IFNQ&list=PLfZw8tixaUnQn8x-_ArzpngZRiqWumi05&index=1">Click here</a></h4>
+        <h4><strong> Second Session :</strong> <a target="_blank" style="color: red;" href="https://www.youtube.com/watch?v=8lKzgbxeKDY&list=PLfZw8tixaUnQn8x-_ArzpngZRiqWumi05&index=2">Click here</a></h4>
+        <h4><strong> Third Session :</strong> <a target="_blank" style="color: red;" href="https://www.youtube.com/watch?v=ueZD7TIZeiA&list=PLfZw8tixaUnQn8x-_ArzpngZRiqWumi05&index=3">Click here</a></h4> -->
+        
+    </div>
+    <!-- <div class="py-5"></div> -->
+    <div class="container membership-box">
+        <form method="POST" action="getting-started-with-technical-content-writing/confirmation/" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input name="name" type="text" class="form-control" id="name" placeholder="Enter Your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input name="email" type="email" class="form-control" id="email" placeholder="Enter Your College Email" required>
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact Number</label>
+                <input name="contact" type="tel" minlength="10" maxlength="10" class="form-control" id="contact"
+                    placeholder="Enter Your Contact Number" required>
+            </div>
+            <div class="form-group">
+                <label for="department">Department</label>
+                <input name="department" type="text" class="form-control" id="department"
+                    placeholder="Enter your Department" required>
+            </div>
+            <div class="form-group">
+                <label for="session">session</label>
+                <input name="session" type="text" class="form-control" id="session"
+                    placeholder="2018-22, 2019-23, 2020-24, 2021-25" required>
+            </div>
+            <div class="form-group">
+                <label for="college">College Name</label>
+                <input name="college" type="text" class="form-control" id="college"
+                    placeholder="Enter your College Name" value="NSEC">
+            </div>
+            <!-- <div class="form-group">
+                <label for="git">Previous Knowledge on Github/Version Control</label>
+                <input name="git" type="text" class="form-control" id="git"
+                    placeholder="Basic / Intermediate / About to start">
+            </div> -->
+            <div class="form-group">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+
+</body>
+{% endblock content %}
+
+{% block files %}
+<!-- Template Main JS File -->
+<script src="{% static '/js/main.js' %}"></script>
+
+{% endblock files %}

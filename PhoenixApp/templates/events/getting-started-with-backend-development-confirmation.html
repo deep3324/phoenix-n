@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<meta name="description"
+    content="Web Development is one of the fundamental fields of technology, which has been at its peak since the early days of the internet. A good website with a good frontend and backend enhances a business, strengthens relations among people, businesses, etc and brings the world a little closer to us. So Cybernix under Phoenix, is bringing together a session 'Getting Started with Backend Development', where we are going to explore the basics of backend web development, from the very basics of PHP and MySql. 
+    ">
+<link href="{% static '/css/style-membership.css' %}" rel="stylesheet">
+<title>Getting Started with Backend Development | PHOENIX</title>
+{% endblock head %}
+
+{% block content %}
+
+<body class="container-fluid px-0">
+    <section id="intro" class="clearfix text-center">
+        <div class="container" data-aos="fade-up">
+            <div class="blog-info" data-aos="zoom-in" data-aos-delay="100">
+                <img class="mb-4" src="{% static '/images/phoenix_white.png' %}" alt="" width="130px">
+                <h2 style="color: #FFF; font-size: 40px; font-weight: 800;">Getting Started with Backend Development</h2>
+            </div>
+        </div>
+    </section>
+    <div class="container rules" style="margin-top: 20px">
+        <h4><strong> Topic:</strong> Getting Started with Backend Development</h4>
+    </div>
+    <div class="container rules" style="margin-top: 20px">
+        <h5>
+            Web Development is one of the fundamental fields of technology, which has been at its peak since the early days of the internet. A good website with a good frontend and backend enhances a business, strengthens relations among people, businesses, etc and brings the world a little closer to us. <br>
+            So Cybernix under Phoenix, is bringing together a session "Getting Started with Backend Development", where we are going to explore the basics of backend web development, from the very basics of PHP and MySql. <br>
+            So if you're a person who is interested in backend web development, these sessions are for you. <br>
+        </h5>
+        <h4><strong>Don't forget to get tuned to catch these awesome live sessions!</strong></h4>
+        <h4><strong> Date: </strong> 23rd February 2022 (Wednesday) <strong>to</strong> 25th February 2022 (Friday)</h4>
+        <h4><strong> Time:</strong> 08:00 PM onwards (duration of session may 1 hr 30 minutes or 2 hrs depending on topics)</h4>
+        <center>
+            <h4><strong>Thank you for Registration. Kindly check your mail for further Information.</strong></h4>
+        </center>
+    </div>
+</body>
+{% endblock content %}
+
+{% block files %}
+<!-- Template Main JS File -->
+<script src="{% static '/js/main.js' %}"></script>
+
+{% endblock files %}

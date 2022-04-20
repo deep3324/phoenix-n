@@ -1,0 +1,306 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+
+<link href="{% static '/css/style-event.css' %}" rel="stylesheet">
+<title>EVENTS | PHOENIX</title>
+{% endblock head %}
+
+
+{% block content %}
+<!-- ======= Intro Section ======= -->
+<section id="intro" class="clearfix">
+  <div class="container" data-aos="fade-up">
+    <div class="intro-img" data-aos="zoom-out" data-aos-delay="200">
+      <img src="{% static '/images/event1.png' %} " alt="" class="img-fluid  eve">
+    </div>
+    <div class="intro-info" data-aos="zoom-in" data-aos-delay="100">
+      <h2><br><span>Events</span><br>under Phoenix</h2>
+      <div>
+        <a href="#about" class="btn-get-started scrollto">Get Started</a>
+        <a href="#more" class="btn-services scrollto">Events</a>
+      </div>
+    </div>
+  </div>
+</section><!-- End Intro Section -->
+
+<main id="main">
+  <!-- ======= About Section ======= -->
+  <section id="about">
+    <div class="container" data-aos="fade-up">
+      <header class="section-header">
+        <h3 class="aku">About Events</h3>
+      </header>
+      <div class="row about-container">
+        <div class="col-lg-6 content order-lg-1 order-2">
+          <h1 class="aku">Avenir</h1>
+          <p>
+            We all know about the majestic train PALACE ON WHEELS...But are you the one who believes in "TECHNOLOGY ON
+            WHEELS"!!..The idea of Avenir unravels the big aspirations hidden inside a creative mind and promises the
+            ultimate platform to showcase talent.It's a chance to present your ideas to the world..
+            <br>
+            <br>
+            Avenir,the Annual Tech Fest of NSEC, stands amongst the top technical fests in the city with enthusiastic
+            participation from students of premier institutes in and around the state. The three day spectacular event
+            yeilds a football of more than 5000 students , thus making it a perfect platform to explore the realm of
+            technical innovation and to witness the best minds striving for excellence.
+
+            The idea of Avenir unravels the big aspirations hidden inside a creative mind and promises the ultimate
+            platform to showcase talent.
+          </p>
+        </div>
+        <div class="col-lg-6 background order-lg-2 avenir" data-aos="zoom-in">
+          <img src="{% static '/images/avenir_blue.png' %} " class="img-fluid" alt="">
+        </div>
+      </div>
+      <div class="row about-extra">
+        <div class="col-lg-6 brainstormer" data-aos="fade-right">
+          <img src="{% static '/images/brainstromer_blue.png' %} " class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-6 pt-5 pt-lg-0" data-aos="fade-left">
+          <h1 class="aku">Brainstormer</h1>
+          <p>
+            Nobody and nothing can deter you from achieving the goal if you try your best .By crossing all the snag
+            with grit and perseverance .Brain, intellect and wit are the three fundamental of a quiz warrior and to
+            bring out these abilities from talented PHOENIX organises BRAINSTORMER an inter college/school QUIZ
+            competition inorder to help you to chase your dreams.
+          </p>
+        </div>
+      </div>
+      <div class="row about-extra">
+        <div class="col-lg-6 order-1 aavahan order-lg-2" data-aos="fade-left">
+          <img src="{% static '/images/aavahan_blue.png' %} " class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-right">
+          <h1 class="aku">Aavahaan</h1>
+          <p>
+            Avaahan stands with the society and intends to establish a broader platform for our technology and
+            innovations with the younger generation acting as the tower of strength.
+          </p>
+          <p>
+            Avaahan is intra college tech fest Organised by PHOENIX inorder to encourage our juiniors and enthusiast
+            to help them upgrade and implement their knowledge to match with best in future.
+          </p>
+          <p>
+            It's a great platform where students of NSEC can compete and learn among themselves and have a good
+            experience to face the greater events ahead.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section><!-- End About Section -->
+
+  <!-- ======= Why Us Section ======= -->
+  <section id="more">
+    <div class="container" data-aos="fade-up">
+      <header class="section-header">
+        <h3 class="head">View More About Events:</h3>
+      </header>
+      <div class="row row-eq-height justify-content-center">
+        <div class="col-lg-4 mb-4">
+          <div class="card" data-aos="zoom-in" data-aos-delay="100">
+            {% comment %} <i class="fa fa-diamond"></i> {% endcomment %}
+            <div class="card-body">
+              <h5 class="card-title">Avenir</h5>
+              <p class="card-text">The Annual Tech Fest Of Netaji Subhash Engineering College.
+              </p>
+              <a href="/avenir" class="readmore">Read more </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card" data-aos="zoom-in" data-aos-delay="200">
+            {% comment %} <i class="fa fa-language"></i> {% endcomment %}
+            <div class="card-body">
+              <h5 class="card-title">Brainstormer</h5>
+              <p class="card-text">Inter-College Quiz competition Organised By PHOENIX.
+              </p>
+              <a href="/brainstormer" class="readmore">Read more </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card" data-aos="zoom-in" data-aos-delay="300">
+            {% comment %} <i class="fa fa-object-group"></i> {% endcomment %}
+            <div class="card-body">
+              <h5 class="card-title">Aavahan</h5>
+              <p class="card-text">Intra College Tech Fest Organised For NSECIANS.
+              </p>
+              <a href="/aavahan" class="readmore">Read more </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Why Us Section -->
+
+  <!-- ======= Testimonials Section ======= -->
+  <section id="testimonials" class="section-bg lockdown">
+    <div class="container" data-aso="zoom-in">
+      <header class="section-header">
+        <h3 class="aku">Special Lockdown Events</h3>
+      </header>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="owl-carousel testimonials-carousel">
+            <div class="testimonial-item">
+              <img src="{% static '/images/nsecgot1.jpg' %} " class="event-testimonial-img" alt="">
+              <h3>NSEC GOT TALENT </h3>
+              <p>
+                Team PHOENIX- The official tech club of NSEC is back again with an online platform to showcase your
+                talent.
+                On this long run chase of talent the one with the maximum likes and comments on his recorded video
+                wins the race with the help of online platform to showcase your talent.
+              </p>
+            </div>
+            <div class="testimonial-item">
+              <img src="{% static '/images/2.0.jpg' %} " class="event-testimonial-img" alt="">
+              <h3>LOCKDOWN QUIZ 2.0</h3>
+              <p>
+                Are you bored and have nothing to do while being locked up in your homes?
+                Are you looking for something to do in your free time? Phoenix- the official tech club of Netaji
+                Subhash Engineering College brings to you Lockdown 2.0 School Edition.. A quiz exclusively for school
+                students.
+              </p>
+            </div>
+            <div class="testimonial-item">
+              <img src="{% static '/images/focused.jpg' %} " class="event-testimonial-img" alt="">
+              <h3>FOCUSED</h3>
+              <p>
+                Feeling frustrated and bored for being quarentined too long? Then fasten your seatbelt!
+                Lensified, the official photography club of Phoenix (NSEC) is giving you an opportunity to find unique
+                and amazing frames inside your own residences during this lockdown period. We, the photographers,
+                simply can't sit back and not see the beauty in small things which are around us in our daily life.
+                Let the journey of catching the sight of those magical little things begin at HOME
+              </p>
+            </div>
+            <div class="testimonial-item">
+              <img src="{% static '/images/microtale.jpg' %} " class="event-testimonial-img" alt="">
+              <h3>MICROTALE</h3>
+              <p>
+                A writer's pen spits creation in silence.
+                Eloquense, the official literary club of Phoenix (NSEC) , presents to you 'MICROTALE', a short
+                creative writing competition. Let your thoughts create an everlasting image on the reader. Your
+                writings should be able to reflect the topics given. So, tie your thoughts and jot it down.
+              </p>
+            </div>
+            <div class="testimonial-item">
+              <img src="{% static '/images/QUIZ.jpg' %} " class="event-testimonial-img" alt="">
+              <h3>QUIZ-O-MANIA</h3>
+              <p>
+                Quiz-O-Mania an online quiz was aimed specially for the students of Class 11th and 12th so prepare them
+                for the upcoming challenges
+              </p>
+            </div>
+            <div class="testimonial-item">
+              <img src="{% static '/images/AUTO.jpg' %}" class="event-testimonial-img" alt="">
+              <h3>AUTOCAD</h3>
+              <p>
+                After survey for AutoCAD forum. We are back to organise forums on the same which will help you a lot.
+                So, be excited guys and join the link for the 1st Forum of AutoCAD starts on 6th August , 12:00 PM to
+                01:00 PM.
+              </p>
+            </div>
+            <div class="testimonial-item">
+              <img src="{% static '/images/C++.jpg' %} " class="event-testimonial-img" alt="">
+              <h3>C++ PROGRAMMING</h3>
+              <p>
+                Coding-This term sounds so fascinating isn't it ?Some think in the very beginning that it isn't their
+                cup of tea.Wait Wait Wait it isn't so tough,Just a right guidance is needed to ignite that fire. Many
+                of us don't get the right guidance which makes us hate this beautiful thing.
+                So for the upcoming coding wizards we have for you the forums on C++ where you will learn the various
+                concepts of C++.
+              </p>
+            </div>
+            <div class="testimonial-item">
+              <img src="{% static '/images/WRITECH.jpg' %} " class="event-testimonial-img" alt="">
+              <h3>WRITECH</h3>
+              <p>
+                A professional writer is an amateur who didn't quit." ~Richard Bach.
+                Keeping this in mind and the present scenarios of pandemic,
+                *ELOQUENSE- The Literary Wing of PHOENIX* brings to you a Technical Writing Event: *WriTech*
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Testimonials Section -->
+  <!-- ======= Why Us Section ======= -->
+  <section id="why-us">
+    <div class="container" data-aos="fade-up">
+      <header class="section-header">
+        <h3 class="head">Previous Events</h3>
+        <p>Given below are the events which have taken place so far under Phoenix. Check the results here</p>
+      </header>
+      <div class="row row-eq-height justify-content-center">
+        <div class="col-lg-4 mb-4">
+          <div class="card" data-aos="zoom-in" data-aos-delay="100">
+            <!-- <i class="fa fa-diamond"></i> -->
+            <div class="card-body">
+              <h5 class="card-title">{{product.0.title}}</h5>
+              <p class="card-text">{{product.0.desc}}</p>
+              {% if product.0.is_for_result %}
+              <a href="{{product.0.slug}}/result" class="readmore">Result </a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        {% for i in product|slice:"1:"%}
+        <div class="col-lg-4 mb-4">
+          <div class="card" data-aos="zoom-in" data-aos-delay="200">
+            <!-- <i class="fa fa-language"></i> -->
+            <div class="card-body">
+              <h5 class="card-title">{{i.title}}</h5>
+              <p class="card-text">{{i.desc}}</p>
+              {% if i.is_for_result %}
+              <a href="/{{i.slug}}/result" class="readmore">Result</a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  <!-- End Why Us Section -->
+
+  <!-- ======= Testimonials Section ======= -->
+  <section id="testimonials" class="section-bg">
+    <div class="container" data-aso="zoom-in">
+      <header class="section-header">
+        <h3 class="aku">Upcoming Events</h3>
+      </header>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="owl-carousel testimonials-carousel">
+            <div class="testimonial-item">
+              <img src="/media/{{upcomingevents.0.image}}" class="event-testimonial-img" alt="">
+              <h3>{{upcomingevents.0.title}}</h3>
+              <p>
+                {{upcomingevents.0.desc}}
+              </p>
+              <a href="/events/{{upcomingevents.0.slug}}">Click Here to Register</a>
+            </div>
+            {% for i in upcomingevents|slice:"1:"%}
+            <div class="testimonial-item">
+              <img src="/media/{{i.image}}" class="event-testimonial-img" alt="">
+              <h3>{{i.title}}</h3>
+              <p>
+                {{i.desc}}
+              </p>
+              <a href="/events/{{i.slug}}">Click Here to Register</a>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Testimonials Section -->
+</main><!-- End #main -->
+{% endblock content %}
+
+{% block files %}
+<!-- Template Main JS File -->
+<script src="{% static '/js/main.js' %}"></script>
+{% endblock files %}

@@ -1,0 +1,154 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="The Official Tech Club of NSEC" name="descriptison">
+    <meta content="PHOENIX" name="author">
+    <!-- Favicons -->
+    <link rel="icon" href="{% static '/favicon/favicon.png' %}">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,700"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Lobster&family=Russo+One&display=swap">
+    <!-- Vendor CSS Files -->
+    <link href="{% static '/vendor/bootstrap/css/bootstrap.min.css' %} " rel="stylesheet">
+    <link href="{% static '/vendor/ionicons/css/ionicons.min.css' %} " rel="stylesheet">
+    <link href="{% static '/vendor/font-awesome/css/font-awesome.min.css' %} " rel="stylesheet">
+    <link href="{% static '/vendor/owl.carousel/assets/owl.carousel.min.css' %} " rel="stylesheet">
+    <link href="{% static '/vendor/venobox/venobox.css' %} " rel="stylesheet">
+    <link href="{% static '/vendor/aos/aos.css' %} " rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <script data-ad-client="ca-pub-1402973072431469" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    {% block head %}
+    {% endblock head %}
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top ">
+        <div class="container">
+            <div class="logo float-left">
+                <a href="/"><img src="{% static '/img/logo1.png' %}" alt="" class="img-fluid  logo"></a>
+                {% block back %}{% endblock back %}
+            </div>
+            <nav class="main-nav float-right d-none d-lg-block ">
+                <ul>
+                    <li class="{{ home_page }}"><a href="/home">Home</a></li>
+                    <li class="{{ clubs_page }}"><a href="/clubs">Clubs</a></li>
+                    <li class="{{ events_page }}"><a href="/events">Events</a></li>
+                    <li class="{{ gallery_page }}"><a href="/gallery">Image Gallery</a></li>
+                    <li class="{{ blogs_page }}"><a href="/blogs">Blogs</a></li>
+                    <li class="{{ core_page }}"><a href="/core2020-21">Core 2020-21</a></li>
+                    <li class="{{ webteam_page }}"><a href="/webteam">Web Team</a></li>
+                    <li class="{{ contact_page }}"><a href="/contact">Contact Us</a></li>
+                </ul>
+            </nav><!-- .main-nav -->
+        </div>
+    </header>
+    {% if messages %}
+    {% for message in messages %}
+    <div style="z-index: 999; position: absolute; top: 10%;">
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+    <!-- #header -->
+    {% block content %}
+    {% endblock content %}
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 footer-info">
+                        <h3>Phoenix</h3>
+                        <p>Phoenix has always strived for overall development of an individual, from technical to
+                            communication skills of a person by conducting domain-specific forums to interpersonal
+                            development by working in a team and taking leadership roles. Inculcating competitive spirit
+                            among college students by organizing events and tech Fests for them to display their skills,
+                            we do it all.</p>
+                    </div>
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><a href="/home">Home</a></li>
+                            <li><a href="/clubs">Clubs</a></li>
+                            <li><a href="/events">Events</a></li>
+                            <li><a href="/gallery">Image Gallery</a></li>
+                            <li><a href="/blogs">Blogs</a></li>
+                            <li><a href="/webteam">Web team</a></li>
+                            <li><a href="/contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h4>Contact Us</h4>
+                        <p>
+                            Netaji Subhash Engineering College, Garia, Panchpota, Kolkata, West Bengal, 700152<br>
+                            <strong>Email:</strong> info@phoenixnsec.in<br>
+                        </p>
+                        <div class="social-links">
+                            <a target="_blank" href="https://t.me/phoenix_nsec2020" class="telegram"><i
+                                    class="fab fa-telegram"></i></a>
+                            <a target="_blank" href="https://www.facebook.com/nsec.phoenix/" class="facebook"><i
+                                    class="fab fa-facebook"></i></a>
+                            <a target="_blank" href="https://www.instagram.com/phoenix_nsec/" class="instagram"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a target="_blank" href="https://www.youtube.com/channel/UCBy1iIhw34E7YlHQ8tc4rDA"
+                                class="youtube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer-newsletter">
+                        <h4>Feedback</h4>
+                        <p>We would love to have feedbacks from anyone who want to suggest any improvements in our
+                            work.</p>
+                        <form action="/review" method="POST"> {% csrf_token %}
+                            <input type="text" name="review" required><input type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong>Phoenix 2021-22</strong>. All Rights Reserved
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+    <a href="" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <script src="https://kit.fontawesome.com/4906d24c07.js" crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NC82XQ9S4J"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-NC82XQ9S4J');
+    </script>
+    <!-- Vendor JS Files -->
+    <script src="{% static '/vendor/jquery/jquery.min.js' %} "></script>
+    <script src="{% static '/vendor/bootstrap/js/bootstrap.bundle.min.js' %} "></script>
+    <script src="{% static '/vendor/jquery.easing/jquery.easing.min.js' %} "></script>
+    <script src="{% static '/vendor/counterup/counterup.min.js' %} "></script>
+    <script src="{% static '/vendor/isotope-layout/isotope.pkgd.min.js' %} "></script>
+    <script src="{% static '/vendor/owl.carousel/owl.carousel.min.js' %} "></script>
+    <script src="{% static '/vendor/waypoints/jquery.waypoints.min.js' %} "></script>
+    <script src="{% static '/vendor/venobox/venobox.min.js' %} "></script>
+    <script src="{% static '/vendor/aos/aos.js' %} "></script>
+    {% block files %}
+    {% endblock files %}
+</body>
+
+</html>

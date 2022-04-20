@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<meta name="description"
+    content="Do you want to build robots? Do you want to host your own army of terminators to do deeds nefarious? Worry no more, as we're bringing to you ROBONIX, from Phoenix. Explore the technician within and let your mind fly away to a world of circuits, AI, and little silver tin men. The Robonix Family welcomes you all to grow, explore and learn together. We will be giving you all the information (classes, discussions, and doubts) regarding the Bootcamp. We will do hands-on robotics give some cool insights.">
+<link href="{% static '/css/style-membership.css' %}" rel="stylesheet">
+<title>Robonix Bootcamp Registration | PHOENIX</title>
+{% endblock head %}
+
+{% block content %}
+
+<body class="container-fluid px-0">
+    <section id="intro" class="clearfix text-center">
+        <div class="container" data-aos="fade-up">
+            <div class="blog-info" data-aos="zoom-in" data-aos-delay="100">
+                <img class="mb-4" src="{% static '/images/phoenix_white.png' %}" alt="" width="130px">
+                <h2 style="color: #FFF; font-size: 40px; font-weight: 800;">Robonix Bootcamp Registration</h2>
+            </div>
+        </div>
+    </section>
+    <div class="container rules" style="margin-top: 20px">
+        <h4><strong> Topic:</strong> Robonix Bootcamp Registration</h4>
+    </div>
+    <div class="container rules" style="margin-top: 20px">
+        <h5>Do you want to build robots? Do you want to host your own army of terminators to do deeds nefarious?<br>
+            Worry no more, as we're bringing to you <strong>ROBONIX</strong>, from Phoenix.<br>  
+            Explore the technician within and let your mind fly away to a world of circuits, AI, and little silver tin men.<br>  
+            The Robonix Family welcomes you all to grow, explore and learn together.<br>  
+            We will be giving you all the information (classes, discussions, and doubts) regarding the Bootcamp. We will do hands-on robotics give some cool insights.<br>  
+        </h5>
+        <h4><strong>Don't forget to get tuned on</strong></h4>
+        <h4><strong> Date: </strong> 12th December 2021 (Sunday)</h4>
+        <h4><strong> Time:</strong> 06:00 PM</h4>
+        <center>
+            <h4><strong>Thank you for Registration. Kindly check your mail for Join Link.</strong></h4>
+        </center>
+    </div>
+</body>
+{% endblock content %}
+
+{% block files %}
+<!-- Template Main JS File -->
+<script src="{% static '/js/main.js' %}"></script>
+
+{% endblock files %}

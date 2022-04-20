@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<meta name="description"
+    content="Git is a free and open source distributed version control system designed to handle everything from small to large projects with speed and efficiency. There will demo projects and lots of other interesting things. On top of it, we shall include certain intermediate to high level projects, on completion of which there will be rewards waiting for all of you.">
+<link href="{% static '/css/style-membership.css' %}" rel="stylesheet">
+<title>GIT - Learning Version Control | PHOENIX</title>
+{% endblock head %}
+
+{% block content %}
+
+<body class="container-fluid px-0">
+    <section id="intro" class="clearfix text-center">
+        <div class="container" data-aos="fade-up">
+            <div class="blog-info" data-aos="zoom-in" data-aos-delay="100">
+                <img class="mb-4" src="{% static '/images/phoenix_white.png' %}" alt="" width="130px">
+                <h2 style="color: #FFF; font-size: 40px; font-weight: 800;">GIT - Learning Version Control</h2>
+            </div>
+        </div>
+    </section>
+    <div class="container rules" style="margin-top: 20px">
+        <h4><strong> Topic:</strong> <strong> GIT</strong> - Learning Version Control</h4>
+    </div>
+    <div class="container rules" style="margin-top: 20px">
+        <h4><strong> Date: <br></strong> 29th September 2021 (Day 1) <br> 30th September 2021 (Day 2) <br> 1st October
+            2021 (Day 3)</h4>
+        <h4><strong> Time:</strong> 07:00 PM to 08:30 PM</h4>
+        <h5>With the advent of the new academic semester, Phoenix - The official Tech Club of Netaji Subhash Engineering
+            College brings to you a three day webinar series on <strong>GIT- Learning Version
+                Control</strong>.<br><br>The Cybernix wing of Phoenix will be conducting these sessions via Google Meet.
+            The link to the sessions and their timings shall be notified to the registered student.<br><br> On these
+            three days you will be guided through all the nooks and corners of Version Control. You will also be
+            introduced to Git and GitHub. Git is a free and open source distributed version control system designed to
+            handle everything from small to large projects with speed and efficiency. <br><br>There will demo projects
+            and lots of other interesting things. On top of it, we shall include certain intermediate to high level
+            projects, on completion of which there will be rewards waiting for all of you. <br><br> <strong> Special Mention:</strong>
+            Everything you have to know about Hacktoberfest 2021 will be mentioned in the webinar. <br><br>
+            Hacktoberfest is a month-long event, run by DigitalOcean, Github, Intel and many other organisations, held in the
+            month of October, to celebrate open source software. If you participate in Hacktoberfest, you may get a
+            chance to win some interesting goodies !<br><br>There are no prerequisites for these sessions. So do join
+            in!
+        </h5>
+        <!-- <h4><strong> No. of Question:</strong> 20</h4>
+        <h4><strong> Time Allowance:</strong> 30 Minutes</h4> -->
+        <h4><strong> First Session :</strong> <a target="_blank" style="color: red;" href="https://www.youtube.com/watch?v=gM7tUS9IFNQ&list=PLfZw8tixaUnQn8x-_ArzpngZRiqWumi05&index=1">Click here</a></h4>
+        <h4><strong> Second Session :</strong> <a target="_blank" style="color: red;" href="https://www.youtube.com/watch?v=8lKzgbxeKDY&list=PLfZw8tixaUnQn8x-_ArzpngZRiqWumi05&index=2">Click here</a></h4>
+        <h4><strong> Third Session :</strong> <a target="_blank" style="color: red;" href="https://www.youtube.com/watch?v=ueZD7TIZeiA&list=PLfZw8tixaUnQn8x-_ArzpngZRiqWumi05&index=3">Click here</a></h4>
+        
+    </div>
+    <div class="py-5"></div>
+    <!-- <div class="container membership-box">
+        <form method="POST" action="git-learning-version-control/confirmation/" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input name="name" type="text" class="form-control" id="name" placeholder="Enter Your Name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input name="email" type="email" class="form-control" id="email" placeholder="Enter Your Email">
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact Number</label>
+                <input name="contact" type="tel" minlength="10" maxlength="10" class="form-control" id="contact"
+                    placeholder="Enter Your Contact Number">
+            </div>
+            <div class="form-group">
+                <label for="department">Department</label>
+                <input name="department" type="text" class="form-control" id="department"
+                    placeholder="Enter your Department">
+            </div>
+            <div class="form-group">
+                <label for="college">College Name</label>
+                <input name="college" type="text" class="form-control" id="college"
+                    placeholder="Enter your College Name">
+            </div>
+            <div class="form-group">
+                <label for="git">Previous Knowledge on Github/Version Control</label>
+                <input name="git" type="text" class="form-control" id="git"
+                    placeholder="Basic / Intermediate / About to start">
+            </div>
+            <div class="form-group">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div> -->
+
+</body>
+{% endblock content %}
+
+{% block files %}
+<!-- Template Main JS File -->
+<script src="{% static '/js/main.js' %}"></script>
+
+{% endblock files %}

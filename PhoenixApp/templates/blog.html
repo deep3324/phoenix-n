@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+
+  <link href="{% static '/css/style-blogs.css' %}" rel="stylesheet">
+  <link href="{% static '/css/style-home.css' %}" rel="stylesheet">
+  <style>
+    .btn-blog{
+      padding: 5px 10px;
+      border: 2px solid #243665;
+      border-radius: 50px;
+    }
+    .btn-blog:hover {
+    background-color: transparent;
+    border: 2px solid #243665;
+  }
+  </style>
+<title>BLOGS | PHOENIX</title>
+{% endblock head %}
+{% block back %}
+<a href="/blogs" class="back"> <i class="fa fa-arrow-left"></i>Back</a>
+{% endblock back %}
+
+{% block content %}
+
+<!-- ======= Intro Section ======= -->
+<section id="intro" class="clearfix">
+  <div class="container" data-aos="fade-up">
+    <div class="blog-info" data-aos="zoom-in" data-aos-delay="100">
+      <h2 style="color: #FFF; font-size: 48px; font-weight: 500;">Blog Posts</h2>
+    </div>
+  </div>
+</section><!-- End Intro Section -->
+<section id="data">
+<div class="row">
+  <div class="left-column">
+    {% for i in blog|slice:"0:"%}
+    <div class="card" >
+      <h2 style="padding: 20px; font-weight: 800;">{{i.BlogTitle}}</h2>
+      <h5 style="padding: 0 20px;">{{i.Date}}</h5>
+      <img src="/media/{{i.image}}" alt="blog " style="padding: 0 20px;"><br/>
+      <p  style="padding: 0 20px;">{{i.Content|safe}}</p>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="right-column">
+    <div class="card" style="margin-right: 10px;">
+      <h2>About Me</h2>
+      <h4>{{blog.0.Studentname}}</h4>
+      <img src="/media/{{blog.0.studentimage}}" alt="{{blog.0.Studentname}}-image" />
+      <p>{{blog.0.aboutstudent}}</p>
+    </div>
+    <div class="card" style="margin-right: 10px;">
+      <div class="write-with-us">
+        <div class="write-box">
+          <h2>
+            WRITE WITH US
+          </h2>
+          <p>
+            Hi There, Are you looking for a place to publish your content? Do u want to see your article posted on the official website of Phoenix?
+            Then here is your chance, Write to us or directly mail u with an article of your choice. Come up with Your article and get your write-up posted here. Hurry!!
+          </p>
+          <button class="btn-blog">
+            <a href="mailto:info@phoenixnsec.in">Mail Us</a>
+          </button>
+          <button class="btn-blog">
+            <a href="/contact">Contact Us</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+{% endblock content %}
+
+{% block files %}
+<!-- Template Main JS File -->
+<script src="{% static '/js/main.js' %}"></script>
+
+{% endblock files %}

@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+
+<link href="{% static '/css/style-contact.css' %}" rel="stylesheet">
+<title>CONTACT US | PHOENIX</title>
+{% endblock head %}
+
+
+{% block content %}
+
+
+<!-- ======= Intro Section ======= -->
+<section id="intro" class="clearfix">
+  <div class="container" data-aos="fade-up">
+    <div class="heading"><span>CONNECT</span> WITH US</div>
+
+  </div>
+</section><!-- End Intro Section -->
+
+<!-- ======= About Section ======= -->
+<section id="about">
+  <div class="container" data-aos="fade-up">
+    <div class=" contactinfo">
+      <div>
+        <h2 style="margin-left: 25px;">Contact Info</h2>
+        <ul class="info">
+          <li>
+            <i class="fa fa-paper-plane"></i>
+            <span>Netaji Subhash Engineering College, Garia, Panchpota, Kolkata, West Bengal, 700052</span>
+          </li>
+          <li>
+            <i class="fa fa-envelope"></i>
+            <span>info@phoenixnsec.in</span>
+          </li>
+          <!-- <li>
+            <i class="fa fa-phone"></i>
+            <span>033 2436 1285 </span>
+          </li> -->
+        </ul>
+      </div>
+      <div class="social">
+        <a target="_blank" href="https://www.facebook.com/nsec.phoenix/" class="facebook"><i class="fab fa-facebook"></i></a>
+        <a target="_blank" href="https://www.instagram.com/phoenix_nsec/" class="instagram"><i class="fab fa-instagram"></i></a>
+        <a target="_blank" href="https://www.youtube.com/channel/UCBy1iIhw34E7YlHQ8tc4rDA" class="youtube"><i class="fab fa-youtube"></i></a>
+        <a target="_blank" href="https://t.me/phoenix_nsec2020" class="youtube"><i class="fab fa-telegram"></i></a>
+      </div>
+    </div>
+    <form class="contactform" action="/contact" method="POST">
+      {% csrf_token %}
+      <div class="contact-form">
+        <div class="input-fields">
+          <input name="name" type="text" class="input" placeholder="Name">
+          <input name="year" type="text" class="input" placeholder="Year">
+          <input name="email" type="email" class="input" placeholder="Email Address">
+        </div>
+        <div class="msg">
+          <textarea name="desc" placeholder="Message"></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </div>
+</section><!-- End About Section -->
+{% endblock content %}
+
+{% block files %}
+
+<!-- Template Main JS File -->
+
+<script src="{% static '/js/main.js' %}"></script>
+{% endblock files %}

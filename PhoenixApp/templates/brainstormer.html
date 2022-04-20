@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+
+
+
+
+
+<link href="{% static '/css/style.css' %}" rel="stylesheet">
+<link href="{% static '/css/style-brainstormer.css' %}" rel="stylesheet">
+<link href="{% static '/css/style-team.css' %}" rel="stylesheet">
+<link href="{% static '/css/style-clubs.css' %}" rel="stylesheet">
+<title>BRAINSTORMER | PHOENIX</title>
+{% endblock head %}
+{% block back %}
+<a href="/events" class="back"> <i class="fa fa-arrow-left"></i>Back</a>
+{% endblock back %}
+
+{% block content %}
+<!-- ======= Intro Section ======= -->
+<section id="intro" class="clearfix">
+  <div class="container" data-aos="fade-up">
+    <div class="heading"><span>BRAINSTORMER</span></div>
+  </div>
+</section><!-- End Intro Section -->
+
+
+<!-- ======= Services Section ======= -->
+<section id="services" class="section-bg">
+  <div class="container" data-aos="fade-up">
+    <!-- 
+        <header class="section-header">
+          <h3>Events</h3>
+          <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
+        </header> -->
+
+    <div class="row justify-content-center">
+      <div class="container" data-aos="zoom-in" data-aos-delay="100">
+        <h4 class="text-center"><strong>Brainstormer</strong> is The Annual Inter College/School Quiz Competition organized by Phoenix, the official tech-club of Netaji Subhash Engineering College. It has seen a surge in the number of enthusiastic participants every year, with students from schools and colleges participating from all over West Bengal. Previously, <strong>Mr. Barry 'o Brien</strong>, revered as a flamboyant quiz master with international stature, was the quizmaster of the event and more than 100 teams participated in the event.
+        </h4>
+      </div>
+
+      <div class="col-md-6 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
+        <div class="box">
+          <div class="icon"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
+          <h4 class="title"><a href="#">Inter-College/School Quiz</a></h4>
+          <p class="description">his event is organized to give the opportunity to participants to brush up their
+            knowledge.
+          </p>
+          <a href="#inter"><button class="btn btn-primary scrollto">View More</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Intercollege Section -->
+<section id="inter">
+  <div class="container" data-aos="fade-up">
+    <header class="section-header">
+      <h1 class="inte">Inter-College/School Quiz</h1>
+      <p class="lmain">Different events categorized under eloquense are:</p>
+    </header>
+    <div class="row featurette" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-md-7">
+        <h2 class="featurette-heading sub">Quiz for College Students</h2>
+        <p class="lead" data-aos="fade-up" data-aos-delay="100">This event focuses on every field which college
+          Students need to know including technical as well as general knowledge.
+
+        </p>
+        <button class="regi" data-aos="fade-up" data-aos-delay="100">Register</button>
+      </div>
+      <div class="col-md-5 ">
+        <img src="{% static '/images/quiz1.jpg' %} " class="imagine">
+        <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto " width="500" height="300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">300x300</text></svg> -->
+      </div>
+    </div>
+    <div class="row featurette" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading sub">Quiz for School Students</h2>
+        <p class="lead" data-aos="fade-up" data-aos-delay="100">This event is organized especially for school
+          children inoder to help them to gain confidence on themselve and prepare themselves for facing the world.
+        </p>
+        <button class="regi" data-aos="fade-up" data-aos-delay="100">Register</button>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img src="{% static '/images/quiz2.jpg' %} " class="imagine" data-aos="fade-up" data-aos-delay="100">
+        <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+      </div>
+    </div>
+</section>
+
+{% endblock content %}
+
+{% block files %}
+<!-- Template Main JS File -->
+<script src="{% static '/js/main.js' %}"></script>
+{% endblock files %}

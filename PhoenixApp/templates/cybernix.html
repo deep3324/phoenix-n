@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link href="{% static '/css/style-clubs.css' %}" rel="stylesheet">
+<title>CYBERNIX | PHOENIX</title>
+{% endblock head %}
+{% block back %}
+<a href="/clubs" class="back"> <i class="fa fa-arrow-left"></i>Back</a>
+{% endblock back %}
+
+{% block content %}
+<!-- ======= Intro Section ======= -->
+<section id="intro" class="clearfix">
+  <div class="container" data-aos="fade-up">
+    <div class="club-info" data-aos="zoom-in" data-aos-delay="100">
+      <h2>C Y B E R N I X</h2>
+      <br>
+      <p>Are you "code" blooded?</p>
+      <div>
+        {% comment %} <a href="#" class="btn-get-started scrollto">Join us</a> {% endcomment %}
+
+
+      </div>
+    </div>
+
+    <div class="club-img" data-aos="zoom-out" data-aos-delay="200">
+      <img src="{% static '/img/bab.png' %}" alt="" class="img-fluid">
+    </div>
+
+
+  </div>
+</section><!-- End Intro Section -->
+<!-- ======= About Section ======= -->
+<section id="about">
+  <div class="container" data-aos="fade-up">
+
+    <header class="section-header">
+      <h3>Cybernix</h3>
+      <p> Make it work, make it right, make it fast.
+      </p>
+      <p>
+        Because,sometimes it pays to stay in bed on Monday, rather than spending the rest of the week
+        debugging Monday’s code.</p>
+    </header>
+
+    <div class="row about-container">
+
+      <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-right">
+        Keeping up with the increased demand of the corporate world the Cybernix club under PHOENIX
+        provides opportunities to
+        student to improve their coding skills . Through Various forums on a vast array of topics and
+        competitions to test the
+        progress of the students the club keeps on working hard to keep its members up to date with the
+        constantly changing IT
+        infrastructure of the world.
+      </div>
+
+      <div class="col-lg-6 background order-lg-2" data-aos="zoom-in">
+        <img src="{% static '/img/c++1.png' %}" class="img-fluid" alt="">
+      </div>
+    </div>
+
+    <div class="row about-extra">
+      <div class="col-lg-6" data-aos="fade-right">
+        <img src="{% static '/img/coder.jpg' %} " class="img-fluid" alt="">
+      </div>
+      <div class="col-lg-6 pt-5 pt-lg-0" data-aos="fade-left">
+        <h4></h4>
+        <p>
+          Regular forums on topics like competitive programming, software development including technologies like GitHub, C++, Java, Python, web tools like HTML, CSS, JS, React.js and many more, starting from beginner to advanced levels, taken by experienced individuals in the respective fields.
+        </p>
+        <p>
+          A platform to showcase their skills in tech fests ,both in the home college tech fests as
+          well as fests in other
+          colleges.
+        </p>
+      </div>
+    </div>
+
+    <div class="row about-extra">
+      <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
+        <img src="{% static '/img/compet.png' %} " class="img-fluid" alt="" style="width:400px;height:200px;">
+      </div>
+
+      <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-right">
+        <p>
+        </p>
+        <p>
+        </p>
+        </p>
+        <p>
+          Coding events like “dare to code” and “bug hunt” are common in both inter and intra college
+          tech fests. Various other
+          events all of which involve various aspects of coding also take place.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- End About Section -->
+
+{% endblock content %}
+
+{% block files %}
+<!-- Template Main JS File -->
+<script src="{% static '/js/main.js' %}"></script>
+{% endblock files %}
