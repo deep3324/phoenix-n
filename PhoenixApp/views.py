@@ -4,7 +4,7 @@ from PhoenixApp import def_mail, membership_card_creation
 from django.shortcuts import render
 from datetime import datetime
 from django.shortcuts import redirect
-from PhoenixApp.models import Card, Git, Membership, Review, Contact, PreviousEvent, UpComingEvent, Result, Blog, Gallery, ChooseATechField, backendDevelopment, gswcpM, gswcw, pythonDevelopment, robonixIntro,appDevelopment, webDevelopment
+from PhoenixApp.models import AdvanceBackendDevelopment, Card, Git, Membership, Review, Contact, PreviousEvent, UpComingEvent, Result, Blog, Gallery, ChooseATechField, backendDevelopment, gswcpM, gswcw, pythonDevelopment, robonixIntro,appDevelopment, webDevelopment
 from django.contrib import messages
 from django.core.mail import send_mail
 from django.conf import settings
@@ -374,11 +374,41 @@ def gswcwv(request):
 #     return render(request, 'events/introduction-to-python-and-django-confirmation.html')
 
 
-def gswbd(request):
+# def gswbd(request):
+#     return render(request, 'events/getting-started-with-backend-development.html')
+
+
+# def gswbdconfirmation(request):
+#     if request.method == 'POST':
+#         name = request.POST.get('name')
+#         email = request.POST.get('email')
+#         contact = request.POST.get('contact')
+#         department = request.POST.get('department')
+#         session = request.POST.get('session')
+#         college = request.POST.get('college')
+#         prior = request.POST.get('prior')
+#         subject = render_to_string('email/confirmation.html', {'name': name})
+#         abc = backendDevelopment(name=name, email=email, contact=contact, department=department,
+#                   college=college, prior=prior, session=session, date=datetime.today())
+#         abcd = backendDevelopment.objects.all()
+#         for i in abcd:
+#             if abc.email == i.email:
+#                 messages.warning(
+#                     request, "Your Form has been Already Submitted.")
+#                 return redirect('/events/getting-started-with-backend-development')
+#         else:
+#             abc.save()
+#         messages.success(
+#             request, "Your Form Has Been Submitted. Be alert for further notice. Don't miss this amazing Opportunity.")
+#         def_mail(
+#             "Getting Started with Backend Development | PHOENIX", subject, email)
+#     return render(request, 'events/getting-started-with-backend-development-confirmation.html')
+
+def aawibd(request):
     return render(request, 'events/getting-started-with-backend-development.html')
 
 
-def gswbdconfirmation(request):
+def aawibdconfirmation(request):
     if request.method == 'POST':
         name = request.POST.get('name')
         email = request.POST.get('email')
@@ -388,18 +418,18 @@ def gswbdconfirmation(request):
         college = request.POST.get('college')
         prior = request.POST.get('prior')
         subject = render_to_string('email/confirmation.html', {'name': name})
-        abc = backendDevelopment(name=name, email=email, contact=contact, department=department,
+        abc = AdvanceBackendDevelopment(name=name, email=email, contact=contact, department=department,
                   college=college, prior=prior, session=session, date=datetime.today())
-        abcd = backendDevelopment.objects.all()
+        abcd = AdvanceBackendDevelopment.objects.all()
         for i in abcd:
             if abc.email == i.email:
                 messages.warning(
                     request, "Your Form has been Already Submitted.")
-                return redirect('/events/getting-started-with-backend-development')
+                return redirect('/events/an-advanced-workshop-in-backend-development')
         else:
             abc.save()
         messages.success(
             request, "Your Form Has Been Submitted. Be alert for further notice. Don't miss this amazing Opportunity.")
         def_mail(
-            "Getting Started with Backend Development | PHOENIX", subject, email)
-    return render(request, 'events/getting-started-with-backend-development-confirmation.html')
+            "An Advanced Workshop in Backend Development | PHOENIX", subject, email)
+    return render(request, 'events/an-advanced-workshop-in-backend-development-confirmation.html')

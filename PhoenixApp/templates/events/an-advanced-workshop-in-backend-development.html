@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<meta name="description"
+    content="In our last session, we ventured in basics of backend web development. So,to go one step further in the journey of backend dev, Cybernix under Phoenix, is bringing together a session 'An Advanced Workshop in Backend Development', where we are going to explore the advanced steps of backend web development, with higher-defined databases. So if you're a person who is interested in backend web development and want to go one step further in Backend Dev, these sessions are for you.
+    ">
+<link href="{% static '/css/style-membership.css' %}" rel="stylesheet">
+<title>An Advanced Workshop in Backend Development | PHOENIX</title>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://phoenixnsec.in/events/an-advanced-workshop-in-backend-development">
+<meta property="og:title" content="An Advanced Workshop in Backend Development | PHOENIX">
+<meta property="og:description" content="In our last session, we ventured in basics of backend web development. So,to go one step further in the journey of backend dev, Cybernix under Phoenix, is bringing together a session 'An Advanced Workshop in Backend Development', where we are going to explore the advanced steps of backend web development, with higher-defined databases. So if you're a person who is interested in backend web development and want to go one step further in Backend Dev, these sessions are for you.">
+{% endblock head %}
+
+{% block content %}
+
+<body class="container-fluid px-0">
+    <section id="intro" class="clearfix text-center">
+        <div class="container" data-aos="fade-up">
+            <div class="blog-info" data-aos="zoom-in" data-aos-delay="100">
+                <img class="mb-4" src="{% static '/images/phoenix_white.png' %}" alt="" width="130px">
+                <h2 style="color: #FFF; font-size: 40px; font-weight: 800;">An Advanced Workshop in Backend Development</h2>
+            </div>
+        </div>
+    </section>
+    <div class="container rules" style="margin-top: 20px">
+        <h4><strong> Topic:</strong> An Advanced Workshop in Backend Development</h4>
+    </div>
+    <div class="container rules" style="margin-top: 20px">
+        <h5>
+            In our last session, we ventured in basics of backend web development. So,to go one step further in the journey of backend dev, Cybernix under Phoenix, is bringing together a session '<strong>An Advanced Workshop in Backend Development</strong>', where we are going to explore the advanced steps of backend web development, with higher-defined databases. So if you're a person who is interested in backend web development and want to go one step further in Backend Dev, these sessions are for you. <br>
+            So if you're a person who is interested in backend web development, these sessions are for you. <br>
+        </h5>
+        <h4><strong>Don't forget to get tuned to catch these awesome live sessions!</strong></h4>
+        <h4><strong> Date: </strong> 24th April 2022 (Saturday)</h4>
+        <h4><strong> Time:</strong> timing will be notified later on. The session will occur in the evening. (duration of session may be 1 hr 30 minutes or 2 hrs depending on topics)</h4>
+    </div>
+    <div class="container membership-box">
+        <form method="POST" action="an-advanced-workshop-in-backend-development/confirmation/" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input name="name" type="text" class="form-control" id="name" placeholder="Enter Your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input name="email" type="email" class="form-control" id="email" placeholder="Enter Your College Email" required>
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact Number</label>
+                <input name="contact" type="tel" minlength="10" maxlength="10" class="form-control" id="contact"
+                    placeholder="Enter Your Contact Number" required>
+            </div>
+            <div class="form-group">
+                <label for="department">Department</label>
+                <input name="department" type="text" class="form-control" id="department"
+                    placeholder="Enter your Department" required>
+            </div>
+            <div class="form-group">
+                <label for="session">session</label>
+                <input name="session" type="text" class="form-control" id="session"
+                    placeholder="2018-22, 2019-23, 2020-24, 2021-25" required>
+            </div>
+            <div class="form-group">
+                <label for="college">College Name</label>
+                <input name="college" type="text" class="form-control" id="college"
+                    placeholder="Enter your College Name" value="NSEC">
+            </div>
+            <div class="form-group">
+                <label for="college">Do you have any prior knowledge of any backend?</label>
+                <select class="form-select form-control" aria-label="Do you have any prior knowledge of any backend?" name="prior">
+                    <option value="No prior knowledge" selected>No prior knowledge</option>
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                  </select>
+            </div>
+            <div class="form-group">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+{% endblock content %}
+
+{% block files %}
+<!-- Template Main JS File -->
+<script src="{% static '/js/main.js' %}"></script>
+
+{% endblock files %}

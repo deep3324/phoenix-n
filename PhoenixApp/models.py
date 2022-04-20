@@ -290,3 +290,21 @@ class backendDevelopment(models.Model):
 
     class Meta:
         verbose_name_plural = "Getting Started with Backend Development"
+
+
+class AdvanceBackendDevelopment(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=100, default="")
+    email = models.CharField(max_length=100, default="")
+    department = models.CharField(max_length=100, default="")
+    contact = models.CharField(max_length=100, default="")
+    college = models.CharField(max_length=100, default="")
+    session = models.CharField(max_length=100, default="")
+    prior = models.CharField(max_length=100, default="")
+    date = models.DateField()
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name_plural = "An Advanced Workshop in Backend Development"

@@ -46,7 +46,9 @@ urlpatterns = [
     # path('events/introduction-to-web-development/confirmation/', views.iwdconfirmation, name="confirmation"),
     # path('events/introduction-to-python-and-django', views.ipd, name="introduction-to-python-and-django"),
     # path('events/introduction-to-python-and-django/confirmation/', views.ipdconfirmation, name="confirmation"),
-    path('events/getting-started-with-backend-development', views.gswbd, name="getting-started-with-backend-development"),
-    path('events/getting-started-with-backend-development/confirmation/', views.gswbdconfirmation, name="confirmation"),
+    # path('events/getting-started-with-backend-development', views.gswbd, name="getting-started-with-backend-development"),
+    # path('events/getting-started-with-backend-development/confirmation/', views.gswbdconfirmation, name="confirmation"),
+    path('events/an-advanced-workshop-in-backend-development', views.aawibd, name="an-advanced-workshop-in-backend-development"),
+    path('events/an-advanced-workshop-in-backend-development/confirmation/', views.aawibdconfirmation, name="confirmation"),
 
 ]

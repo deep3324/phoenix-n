@@ -1,5 +1,5 @@
 from django.contrib import admin
-from PhoenixApp.models import ArtCraft, Card, ChooseATechField, Git, Membership,  Review, Contact, PreviousEvent, UpComingEvent, Result, Blog, Gallery, appDevelopment, backendDevelopment, gswcw, pythonDevelopment, quizomania, gswcpM, robonixIntro, webDevelopment
+from PhoenixApp.models import AdvanceBackendDevelopment, ArtCraft, Card, ChooseATechField, Git, Membership,  Review, Contact, PreviousEvent, UpComingEvent, Result, Blog, Gallery, appDevelopment, backendDevelopment, gswcw, pythonDevelopment, quizomania, gswcpM, robonixIntro, webDevelopment
 from import_export import resources
 from import_export.admin import ImportExportModelAdmin
 # Register your models here.
@@ -96,6 +96,17 @@ class backendDevelopmentResource(resources.ModelResource):
 @admin.register(backendDevelopment)
 class backendDevelopmentAdmin(ImportExportModelAdmin):
     resource_class = backendDevelopmentResource
+    list_display = ("name", "email","department", "college",
+                    "session", "contact","prior")
+    search_fields = ['name','email']
+
+class AdvanceBackendDevelopmentResource(resources.ModelResource):
+    class Meta:
+        model = AdvanceBackendDevelopment
+
+@admin.register(AdvanceBackendDevelopment)
+class AdvanceBackendDevelopmentAdmin(ImportExportModelAdmin):
+    resource_class = AdvanceBackendDevelopmentResource
     list_display = ("name", "email","department", "college",
                     "session", "contact","prior")
     search_fields = ['name','email']
